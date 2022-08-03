@@ -1,4 +1,4 @@
-.element__like-button{
+.element__like-button {
   width: 23px;
   height: 19px;
   border: none;
@@ -6,7 +6,7 @@
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../../../images/white-heart.svg');
+  background-image: url("../../../images/white-heart.svg");
   cursor: pointer;
 }
 

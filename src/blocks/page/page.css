@@ -1,13 +1,11 @@
-
 .page {
-  max-width: 1280px;
   margin: 0 auto;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background: #000;
-  font-family: 'Inter', Arial, sans-serif;
-  color: #FFF;
+  font-family: "Inter", Arial, sans-serif;
+  color: #fff;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;

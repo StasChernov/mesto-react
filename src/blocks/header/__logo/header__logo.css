@@ -3,8 +3,8 @@
   margin-bottom: 41px;
   height: 33px;
   width: 142px;
-  background-color:black;
-  background-image:url('../../../images/header_logo.svg');
+  background-color: black;
+  background-image: url("../../../images/header_logo.svg");
   background-size: cover;
 }
 

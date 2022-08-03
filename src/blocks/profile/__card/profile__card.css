@@ -1,4 +1,4 @@
-.profile__card{
+.profile__card {
   display: flex;
   align-items: center;
 }
@@ -7,5 +7,5 @@
   .profile__card {
     flex-direction: column;
     width: 100%;
-  } 
+  }
 }
