@@ -2,7 +2,12 @@ import React from "react";
 import api from "../utils/Api";
 import Card from "./Card";
 
-export default function Main({onEditAvatar, onAddPlace, onEditProfile, onCardClick}) {
+export default function Main({
+  onEditAvatar,
+  onAddPlace,
+  onEditProfile,
+  onCardClick,
+}) {
   const [userName, setUserName] = React.useState("Станислав");
   const [userDescription, setUserDescription] = React.useState("Студент");
   const [userAvatar, setUserAvatar] = React.useState("");
@@ -49,11 +54,7 @@ export default function Main({onEditAvatar, onAddPlace, onEditProfile, onCardCli
         <ul className="elements">
           {cards.map((card) => {
             return (
-              <Card
-                key={card._id}
-                card={card}
-                onCardClick={onCardClick}
-              />
+              <Card key={card._id} card={card} onCardClick={onCardClick} />
             );
           })}
         </ul>

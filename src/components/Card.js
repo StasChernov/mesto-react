@@ -1,4 +1,4 @@
-export default function Card({card, onCardClick}) {
+export default function Card({ card, onCardClick }) {
   function handleClick() {
     onCardClick(card);
   }
@@ -18,9 +18,7 @@ export default function Card({card, onCardClick}) {
         <h2 className="element__title">{card.name}</h2>
         <div className="element__like">
           <button className="element__like-button" type="button"></button>
-          <span className="element__likes-counter">
-            {card.likes.length}
-          </span>
+          <span className="element__likes-counter">{card.likes.length}</span>
         </div>
       </div>
     </li>
