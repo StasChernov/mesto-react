@@ -1,4 +1,4 @@
-import { apiURL, headers } from "./constants";
+import { apiURL, headers } from "./Constants";
 
 class Api {
   constructor(headers, apiURL) {
@@ -55,16 +55,9 @@ class Api {
     }).then((res) => this._handleResponse(res));
   }
 
-  likeCard(cardId) {
-    return fetch(`${this._apiCardsURL}/${cardId}/likes `, {
-      method: "PUT",
-      headers: this._headers,
-    }).then((res) => this._handleResponse(res));
-  }
-
-  deleteLikeCard(cardId) {
-    return fetch(`${this._apiCardsURL}/${cardId}/likes `, {
-      method: "DELETE",
+  changeLikeCardStatus(cardId, isLiked) {
+    return fetch(`${this._apiCardsURL}/${cardId}/likes`, {
+      method: isLiked ? "PUT" : "DELETE",
       headers: this._headers,
     }).then((res) => this._handleResponse(res));
   }
