@@ -24,7 +24,7 @@ export default function App() {
         setCurrentUser(user);
         setCards(cards);
       })
-      .catch((err) => console.log(`Ошибка: ${err.status}`));
+      .catch((err) => console.log(err));
   }, []);
 
   function handleCardLike(card) {
@@ -32,7 +32,8 @@ export default function App() {
 
     api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
       setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
-    });
+    })
+    .catch((err) => console.log(err));
   }
 
   function handleCardDelete(card) {
@@ -40,28 +41,32 @@ export default function App() {
 
     api.deleteCard(card._id).then(() => {
       setCards((state) => state.filter((c) => c._id !== card._id));
-    });
+    })
+    .catch((err) => console.log(err));
   }
 
   function handleUpdateUser(user) {
     api.setUserInfo(user.name, user.about).then((user) => {
       setCurrentUser(user);
       closeAllPopups();
-    });
+    })
+    .catch((err) => console.log(err));
   }
 
   function handleUpdateAvatar(avatarURL) {
     api.updateAvatar(avatarURL).then((user) => {
       setCurrentUser(user);
       closeAllPopups();
-    });
+    })
+    .catch((err) => console.log(err));
   }
 
   function handleAddPlace(newCard) {
     api.addNewCard(newCard.name, newCard.link).then((newCard) => {
       setCards([newCard, ...cards]);
       closeAllPopups();
-    });
+    })
+    .catch((err) => console.log(err));
   }
 
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] =
